@@ -82,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                   color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
-              focusNode: _usernameFocusNode,
+              focusNode: _passwordFocusNode,
             ),
             ButtonBar(
               children: <Widget>[
@@ -98,6 +98,10 @@ class _LoginPageState extends State<LoginPage> {
                 // TODO: Add a beveled rectangular border to NEXT (103)
                 ElevatedButton(
                   child: const Text('NEXT'),
+                  style: ButtonStyle(
+                    elevation: MaterialStateProperty.all(8.0),
+                  ),
+
                   onPressed: () {
                     Navigator.pop(context);
                   },
